@@ -3,5 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.index, name="index"),  # Use an empty string for the root URL of this app
+    path("", views.index, name="index"), 
+    path("<int:id>", views.book_detail, name='book_detail'),
 ]
